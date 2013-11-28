@@ -23,5 +23,9 @@ module Cms
       where(:categorized_type => type)
     }
 
+    def as_json(options={})
+      super(:only => [:id, :label])
+    end
+
   end
 end

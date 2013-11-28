@@ -5,6 +5,10 @@ class ActionDispatch::Routing::Mapper
       get 'cms-css/:site_id/:identifier' => 'assets#render_css', :as => 'render_css'
       get 'cms-js/:site_id/:identifier'  => 'assets#render_js',  :as => 'render_js'
 
+      resource :site, :only => [], :path => "(*cms_path)"  do
+        resources :categories
+      end
+
       if options[:sitemap]
         get '(:cms_path)/sitemap' => 'content#render_sitemap',
           :as           => 'render_sitemap',
