@@ -1,4 +1,4 @@
-.page-header
+- content_for :page_header do
   %h2= t('.title')
 
 = comfy_form_for @layout, :as => :layout, :url => {:action => :create} do |form|

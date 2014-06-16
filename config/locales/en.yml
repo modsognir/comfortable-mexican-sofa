@@ -179,7 +179,7 @@ en:
           not_found: Revision Not Found
           
           show:
-            title: Revisions for
+            title: Revisions
             revision: Revision
             full_path: Full Path
             slug: Slug

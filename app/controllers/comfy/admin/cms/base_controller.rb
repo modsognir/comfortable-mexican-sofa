@@ -49,4 +49,13 @@ protected
       flash.now[:danger] = I18n.t('comfy.admin.cms.base.fixtures_enabled')
     end
   end
+
+  def resource
+    nil
+  end
+
+  def resource_name
+    resource.class.model_name.human.pluralize if resource
+  end
+  helper_method :resource_name
 end

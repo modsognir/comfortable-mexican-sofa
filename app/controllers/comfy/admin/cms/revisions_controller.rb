@@ -53,5 +53,9 @@ protected
       when ::Comfy::Cms::Snippet then edit_comfy_admin_cms_site_snippet_path(@site, @record)
     end
   end
-  
+
+  def resource
+    @record
+  end
+
 end

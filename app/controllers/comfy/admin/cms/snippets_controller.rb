@@ -63,4 +63,8 @@ protected
   def snippet_params
     params.fetch(:snippet, {}).permit!
   end
+
+  def resource
+    @snippet
+  end
 end

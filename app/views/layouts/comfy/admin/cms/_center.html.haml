@@ -1,3 +1,10 @@
+.page-header
+  - if resource_name
+    %span.sub-header
+      = t(resource_name)
+
+  = yield :page_header
+
 - flash.each do |type, message|
   .alert{:class => "alert-#{type}"}
     %button.close{:type => 'button', :class => "close", :data => {:dismiss => 'alert'}} &times;

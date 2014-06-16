@@ -66,5 +66,8 @@ protected
   def layout_params
     params.fetch(:layout, {}).permit!
   end
-  
+
+  def resource
+    @layout
+  end
 end

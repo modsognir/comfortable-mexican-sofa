@@ -113,5 +113,9 @@ protected
     end
     params.fetch(:file, {}).permit!
   end
-  
+
+  def resource
+    @file
+  end
+
 end

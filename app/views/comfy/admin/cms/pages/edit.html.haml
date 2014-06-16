@@ -1,4 +1,4 @@
-.page-header
+- content_for :page_header do
   = link_to t('.revision', :count => @page.revisions.count), comfy_admin_cms_site_page_revisions_path(@site, @page), :class => 'btn btn-default pull-right'
   %h2= t('.title')
 

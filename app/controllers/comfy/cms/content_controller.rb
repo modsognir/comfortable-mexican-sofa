@@ -57,4 +57,9 @@ protected
   rescue ActiveRecord::RecordNotFound
     raise ActionController::RoutingError.new("Page Not Found at: \"#{params[:cms_path]}\"")
   end
+
+  def resource_name
+    @cms_page.class.model_name.human if @cms_page
+  end
+  helper_method :resource_name
 end
